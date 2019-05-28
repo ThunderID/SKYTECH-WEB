@@ -1,6 +1,6 @@
 <head>
 
-    <title>Home | Leon - Responsive Coming Soon Template</title>
+    <title>Skytech</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700%7CMRoboto:300,400,500,700" rel="stylesheet">
 
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/skytech.ico">
 
 </head>
