@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	@include('partials._head')
-	@stack('styles')
+	@yield('styles')
 </head>
 <body>
 	@yield('menu')
 	@include('partials._javascript')
-	@stack('scripts')
+	@yield('scripts')
 </body>
 </html>

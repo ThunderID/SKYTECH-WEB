@@ -13,8 +13,8 @@
     </div>
     <div class="overlay-inner bg-black opacity-60"></div>
     <div class="frame">
-        <div style="background-color:blueviolet !important" class="frame-inner frame-inner-a"></div>
-        <div style="background-color:blueviolet !important" class="frame-inner frame-inner-b"></div>
+        <div style="" class="bg-blueviolet frame-inner frame-inner-a"></div>
+        <div style="" class="bg-blueviolet frame-inner frame-inner-b"></div>
     </div>
 </div>
 
@@ -25,7 +25,7 @@
         <!-- Logo -->
         <a href="/" class="logo mx-auto">
             <img src="./images/logo.png" alt="" style="width: 200px;">
-            <img src="./images/logo-text.png" alt="" style="width: 200px;margin-top: -200px;">
+            <img src="./images/logo-text.png" alt="" style="width: 180px;margin-top: -180px;">
         </a>
     </header>
 
@@ -34,7 +34,7 @@
         <div class="home-block-inner">
 
             <section id="home" class="d-flex min-vh--100">
-                <div class="container align-self-center text-white">
+                <div class="container align-self-center text-white" style="margin-top: -90px;">
                     <h1 class="mb-3">Skytech</h1>
                     <p class="lead mb-5">
                         Skytech adalah sebuah perusahan Retail Technology, yang menyediakan produk teknologi berupa Laptop, Smartphone, Kamera, IoT Technology (Internet of Things), dan berbagai macam produk teknologi lainnya
@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-12 col-md-8 col-lg-7">
                             <div class="subscribe-form">
-                                <form class="mb-0" id="sf" name="sf" action="{{ route('subscribing') }}" method="post" autocomplete="off">
+                                <form class="mb-0" action="{{ route('subscribing') }}" method="post" autocomplete="off">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="row mx-0">
                                         <div class="form-process"></div>
@@ -57,7 +57,7 @@
                                         </div>
 
                                         <div class="col-12 col-sm-4 px-0">
-                                            <button style="background-color:blueviolet !important; border-color:blueviolet !important" class="btn btn-primary rounded-0 btn-block shadow-3" type="submit" id="sf-submit" name="sf-submit">Notify Me</button>
+                                            <button class="btn btn-primary bg-blueviolet border-blueviolet rounded-0 btn-block shadow-3" type="submit">Notify Me</button>
                                         </div>
 
                                     </div>
@@ -70,16 +70,21 @@
             </section>
 
             <nav class="usefull-nav usefull-nav-pinned light d-none d-xl-flex">
-                <ul>
+                <ul class="mb-4">
                     <li><a href="https://www.facebook.com/skytech.id" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
                     <li><a href="https://www.instagram.com/skytech.id/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://www.youtube.com/channel/UCQlZ4k1aix09Ze-du_S94Kw" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 </ul>
-                <ul>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                <p class="mb-1"><strong>Alamat Store Kami :</strong></p>
+                <ul class="mb-0">
+                    <li>Lenmarc Mall Surabaya Lantai UG No.33-35 <br/> Jln. Mayjen Yono Suwoyo No. 9, Pradah Kalikendal, Dukuh Pakis,<br/>Surabaya, Jawa Timur - 60226</li>
                 </ul>
+                <ul class="py-0 mb-3">
+                    <li class="py-0">Telp. +623151163029</li>
+                </ul>
+                <p class="text-center d-block d-lg-none my-3">© 2019 Skytech.id</p>
+                <p class="text-left d-none d-lg-block">© 2019 Skytech.id</p>
             </nav>
 
         </div>
@@ -92,4 +97,11 @@
 
 @section('scripts')
 
+@endsection
+
+@section('styles')
+    <style>
+        .bg-blueviolet{ background-color: blueviolet !important; }
+        .border-blueviolet { border-color: blueviolet !important; }
+    </style>
 @endsection

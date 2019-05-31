@@ -18,10 +18,13 @@ class SubscribeController extends Controller
 		if (!$model) {
 			$model 		= new ComingSoon;
     }
-    
-		$model->email 	= $email;
-		$model->save();
 
+
+    if ($email !== '' & $email !== null) {
+      $model->email 	= $email;
+      $model->save();
+    }
+    
 		return redirect()->route('index');
   }
 }

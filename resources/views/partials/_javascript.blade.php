@@ -5,4 +5,4 @@
 <script src="js/jquery.form.min.js"></script>
 <script src="js/jquery.countdown.min.js"></script>
 
-<script src="js/main.js"></script>
+{{-- <script src="js/main.js"></script> --}}
