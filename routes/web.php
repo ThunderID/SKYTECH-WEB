@@ -13,4 +13,6 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
+
+Route::post('/subscribing', 'SubscribeController@store')->name('subscribing');
