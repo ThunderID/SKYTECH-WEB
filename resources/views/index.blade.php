@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-12 col-md-8 col-lg-7">
                             <div class="subscribe-form">
-                                <form class="mb-0" action="{{ route('subscribing') }}" method="post" autocomplete="off">
+                                <form onsubmit="onSubmit()" class="mb-0" action="{{ route('subscribing') }}" method="post" autocomplete="off">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="row mx-0">
                                         <div class="form-process"></div>
@@ -57,7 +57,10 @@
                                         </div>
 
                                         <div class="col-12 col-sm-4 px-0">
-                                            <button class="btn btn-primary bg-blueviolet border-blueviolet rounded-0 btn-block shadow-3" type="submit">Notify Me</button>
+                                            <button id="btnNotify" class="btn btn-primary bg-blueviolet border-blueviolet rounded-0 btn-block shadow-3" type="submit">
+                                                <div style="display:none" id="spinner" class="lds-dual-ring"></div>
+                                                <span style="margin-left:10px">Notify Me</span>
+                                            </button>
                                         </div>
 
                                     </div>
@@ -90,6 +93,39 @@
         </div>
     </div><!-- .home-block end -->
 
+    <script>
+    function onSubmit() {
+        document.getElementById('spinner').removeAttribute("style")
+        document.getElementById('btnNotify').disabled = true
+    }
+    </script>
+
+    <style>
+    .lds-dual-ring {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    }
+    .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    }
+    @keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+    </style>
     <!-- Site Footer -->
     @include('partials._footer')
 </div>
