@@ -41,6 +41,8 @@
                     </p>
                     <div class="row">
                         <div class="col-12 col-md-8 col-lg-7">
+                            @include('components.alert')
+
                             <div class="subscribe-form">
                                 <form onsubmit="onSubmit()" class="mb-0" action="{{ route('subscribing') }}" method="post" autocomplete="off">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
